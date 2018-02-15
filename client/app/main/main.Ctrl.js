@@ -7,7 +7,7 @@
 
   MainCtrl.$inject = ['$scope', '$state', 'Auth', '$modal', '$http'];
 
-  function MainCtrl($scope, $state, Auth) {
+  function MainCtrl($scope, $state, Auth, $modal, $http) {
     $scope.user = Auth.getCurrentUser();
 
     $scope.look = {};

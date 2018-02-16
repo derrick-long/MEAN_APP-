@@ -12,9 +12,14 @@ exports.scrape = function(req,res) {
 
   if(url.indexOf('pinterest') > -1){
     scraperToUse = 'pinterest';
-  } else {
+  }
+  else if(url.indexOf('imgur') > -1){
+    scraperToUse = 'imgur';
+  }
+   else {
     console.log('cannot locate scraper');
   }
+  
   scrapers[scraperToUse].list(url,function(data){
     console.log('data from scraper:', data);
     res.json(data);

@@ -1,10 +1,10 @@
 'use strict';
 
-var controller = require('./imgScraper.controller');
+var controller = require('../look/look.controller');
 var express = require('express');
 var router = express.Router();
 var auth = require('../../auth/auth.service');
 
-router.post('/scrape', auth.isAuthenticated(),controller.scrape);
+router.post('/scrapeUpload', auth.isAuthenticated(), controller.scrapeUpload);
 
 module.exports = router;

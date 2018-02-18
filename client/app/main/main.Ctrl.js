@@ -32,8 +32,7 @@
     $scope.$watch('look.link', function(newVal, oldVal){
       if(newVal.length > 5){
         $scope.loading = true;
-      }
-      $http.post('/api/links/scrape',{
+        $http.post('/api/links/scrape',{
         url: $scope.look.link
       })
       .then(function(data){
@@ -54,6 +53,7 @@
         $scope.loading = false;
         $scope.UploadLookForm = false;
       });
+    }
     });
 
     $scope.addScrapePost = function(){

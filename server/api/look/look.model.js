@@ -1,7 +1,7 @@
 'use strict';
 
 var mongoose = require('mongoose');
-var Schema = moongoose.Schema;
+var Schema = mongoose.Schema;
 
 var LookSchema = new Schema({
   image: String,
